@@ -7,6 +7,10 @@ dayjs.extend(customParseFormat);
 dayjs.extend(isoWeek);
 
 assert.strictEqual(dayjs('21', 'YY').format('YYYY'), '2021');
+assert.strictEqual(dayjs('21', 'YY').format('YYYY'), '2021');
+assert.strictEqual(dayjs('21', 'YY').isoWeek(22).format('YYYY'), '2021');
+assert.strictEqual(dayjs('21', 'YY').isoWeek(23).format('YYYY'), '2021');
+assert.strictEqual(dayjs('21', 'YY').isoWeek(24).format('YYYY'), '2021');
 assert.strictEqual(dayjs('21', 'YY').isoWeek(22).startOf('isoWeek').format('DD.MM.YYYY'), '31.05.2021');
 assert.strictEqual(dayjs('21', 'YY').isoWeek(22).endOf('isoWeek').format('DD.MM.YYYY'), '06.06.2021');
 assert.strictEqual(dayjs('21', 'YY').isoWeek(23).startOf('isoWeek').format('DD.MM.YYYY'), '07.06.2021');
